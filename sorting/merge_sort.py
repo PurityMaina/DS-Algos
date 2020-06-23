@@ -41,3 +41,5 @@ a = merge_sort(a)
 # Print output
 print("Sorted array is : ")
 print(*a)
+
+# O(n log n)

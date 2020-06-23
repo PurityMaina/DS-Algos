@@ -26,4 +26,4 @@ for i in range(len(arr)):
     print(arr[i])
 
 
-#sorting goes through n-1 iterations, looking at n-1 pairs of adjacent elements. O(n power 2),
+#sorting goes through n-1 iterations, looking at n-1 pairs of adjacent elements. O(n2)
