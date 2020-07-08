@@ -20,6 +20,9 @@ def fizzBuzz(n):
         else :
             print(i)
 
+# big O(n)
 if __name__ == '__main__':
+    fizzBuzz(3)
 
-# Big O(n)
+
+
