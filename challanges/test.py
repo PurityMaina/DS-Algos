@@ -14,9 +14,9 @@ def sum_of_pairs(input, k):
     for i in range(0, n): #pair 1
         for j in range(i + 1, n): #pair 2
             if (input[i] + input[j] == k): #check the sum of pairs
-                print("Yes", sep="")
+                print("Yes")
             else:
-                print("No", sep="")
+                print("No")
 
 sum_of_pairs(input, k)
 
