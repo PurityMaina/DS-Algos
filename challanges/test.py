@@ -10,14 +10,15 @@ k = 8
 #return yes or no
 
 def sum_of_pairs(input, k):
-    n = len(input)
-    for i in range(0, n): #pair 1
-        for j in range(i + 1, n): #pair 2
-            if (input[i] + input[j] == k): #check the sum of pairs
-                print("Yes")
-            else:
-                print("No")
+    sum_set = set()
+    for i in range(0, len(input)):
+        temp_array = k - input[i]
+        if (temp_array in sum_set):
+            print("Yes (" + str(input[i]) + ", " + str(temp_array) + ")")
+        else:
+            print("No")
+        sum_set.add(input[i])
 
 sum_of_pairs(input, k)
 
-#big O notation for k is 0(n^2)
+#big O notation for k is 0(n)
