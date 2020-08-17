@@ -6,17 +6,13 @@
 def insertionSort(arr):
     # Traverse through 1 to len(arr)
     for i in range(1, len(arr)):
+        element_to_sort = arr[i]
+        sorted_element = i-1
+        while sorted_element >= 0 and element_to_sort < arr[sorted_element]:
+            arr[sorted_element + 1] = arr[sorted_element] #add item to sorted array
+            sorted_element -= 1 # incrementally sort down the list
+        arr[sorted_element + 1] = element_to_sort #if it is greater than, move up and add to sorted element
 
-        key = arr[i]
-
-        # Move elements of arr[0..i-1], that are
-        # greater than key, to one position ahead
-        # of their current position
-        j = i - 1
-        while j >= 0 and key < arr[j]:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = key
 
 
 # Driver code to test above

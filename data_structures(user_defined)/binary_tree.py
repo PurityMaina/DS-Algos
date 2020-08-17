@@ -1,4 +1,4 @@
-# each node has atleast 2 children
+    # each node has atleast 2 children
 # complete btree - every level is filled other than the last level
 # full btree - every node has 2 or 0 children
 # trees may be traversed depth-first or breadth-first ie non-linear.

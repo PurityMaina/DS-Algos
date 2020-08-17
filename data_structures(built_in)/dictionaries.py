@@ -21,3 +21,4 @@ print('Added an operation, now we have {} operations'.format(len(stack_operation
 
 for key, value in stack_operations.items():
     print('This is what  a {} does {}'.format(key, value))
+

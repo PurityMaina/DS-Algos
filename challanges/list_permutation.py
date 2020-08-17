@@ -1,4 +1,5 @@
 # Python function to print permutations of a given list
+
 def permutations(elements):
     if len(elements) <= 1:
         return [elements]
