@@ -1,27 +1,63 @@
-# FIFO data structure
-#from collections import deque
 
-# Initializing a queue
-#q = deque()
-#Enqueue: Adds an item to the queue. If the queue is full, then it is said to be an Overflow conditiont
-#Dequeue: Removes an item from the queue.
-#Front: Get the front item from queue
-#Rear: Get the last item from queue
+list=[]
+list.append(1) # append 1
+print("enqueue:",list)
+list.append(2) # append 2
+print("enqueue:",list)
+list.append(3) # append 3
+print("enqueue:",list)
+list.pop(0) # pop 1
+print("dequeue:",list)
+print("peek:",list[-1]) # get top most element
+list.pop(0) # pop 2
+print("dequeue:",list)
+print("peek:",list[-1]) # get top most element
 
-presidents = []
 
-# adding elements to the queue
-presidents.append('Jommo')
-presidents.append('Moi')
-presidents.append('Kibaki')
-presidents.append('Uhuru')
+class Queue:
+    def __init__(self):
+        self.s1 = []
+        self.s2 = []
 
-print('Presidents are', presidents)
+    def enQueue(self, x):
 
-# Removing elements from the queue
-print("\nElements dequeued from queue")
-print(presidents.pop(0))
-print(presidents.pop(0))
+        # Move all elements from s1 to s2  
+        while len(self.s1) != 0:
+            self.s2.append(self.s1[-1])
+            self.s1.pop()
 
-print("\nQueue after removing elements")
-print(presidents)
+            # Push item into self.s1
+        self.s1.append(x)
+
+        # Push everything back to s1  
+        while len(self.s2) != 0:
+            self.s1.append(self.s2[-1])
+            self.s2.pop()
+
+            # Dequeue an item from the queue
+
+    def deQueue(self):
+
+        # if first stack is empty
+        if len(self.s1) == 0:
+            print("Q is Empty")
+
+            # Return top of self.s1
+        x = self.s1[-1]
+        self.s1.pop()
+        return x
+
+        # Driver code
+
+
+if __name__ == '__main__':
+    q = Queue()
+    q.enQueue(1)
+    q.enQueue(2)
+    q.enQueue(3)
+
+    print(q.deQueue())
+    print(q.deQueue())
+    print(q.deQueue())
+
+    # This code is contributed by PranchalK

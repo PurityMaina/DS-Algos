@@ -7,7 +7,7 @@ class Node:
     #initialize node object
     def __init__(self, data=None):
         self.data = data #initialize data
-        self.next = None #set next as none
+        self.next = None #set next as none, last node
 
 
 class SLinkedList:
