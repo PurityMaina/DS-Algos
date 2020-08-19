@@ -15,11 +15,16 @@ def isPalindrome(str):
 
 def isPalindrome(word):
   midPoint = len(word)//2
+  print("****************Midpoint is ***********************", midPoint)
   palindrome = True
   for i in range(0,midPoint):
+    print("****************Midpoint is ***********************", midPoint)
+
     left = word[i]
-    right = word[len(word)-i-1] #check the last item after the current
-    print(right)
+    print("****************Left is ***********************", left)
+
+    right = word[len(word)-i-1] #takw the length of word then put the index all the way to the end (check the last item after the current)
+    print("****************Right is ***********************", right)
     if left!=right:
       palindrome=False
       break
@@ -36,7 +41,7 @@ def is_palindrome(s):
     return False
 
 
-s = "DAD"
+s = "DAAD"
 if check_palindrome(s):
     print("True")
 else:
