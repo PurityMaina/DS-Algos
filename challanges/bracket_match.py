@@ -11,13 +11,18 @@ def bracket_match(text):
             stack.append(i)
             diffCounter += 1
             print("Appending",len(stack))
-        elif text[i] in close_list and len(stack) > 0:  #find close for opening bracket
-            stack.pop()
-            diffCounter -= 1
-            print("Popping", len(stack))
-        if ( diffCounter < 0 ):
+        elif text[i] in close_list:  #find close for opening bracket
+            if len(stack)> 0:
+                stack.pop()
+                diffCounter -= 1
+                print("Popping", len(stack))
+            else:
+                diffCounter -= 1
+                print("Popping", len(stack))
+
+        if (diffCounter < 0 ):
             diffCounter += 1
             ans += 1
-    return ans  + diffCounter
+    return ans+ diffCounter
 
-print(bracket_match("(())"))
+print(bracket_match(")("))
